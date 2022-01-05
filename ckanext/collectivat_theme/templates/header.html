@@ -1,0 +1,14 @@
+{% ckan_extends %}
+
+
+{% block header_debug -%}
+    {{ super() }}
+    <div class="pre-header">
+        <div class="container">
+            <img class="img-responsive img-founded" alt="" src="/images/ARRIBA.png" />
+            {% trans %}This project is funded by the European Union.
+            {% endtrans %}
+        </div>        
+    </div>    
+{% endblock -%}
+

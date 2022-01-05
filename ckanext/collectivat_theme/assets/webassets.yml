@@ -1,0 +1,5 @@
+collectivat_theme:
+  contents:
+    - collectivat_theme.css
+  output: assets/%(version)collectivat_theme.css
+  filters: cssrewrite
