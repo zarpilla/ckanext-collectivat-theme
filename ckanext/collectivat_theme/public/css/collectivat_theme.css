@@ -253,6 +253,29 @@ body{
 .page-header{
     background: none!important;
 }
+.dataset-heading{
+    font-size: 3rem!important;
+}
+.main .badge{
+    background-color: #ccc!important;
+    float: right;
+    margin-right: 15px!important;
+}
+.nav-item.active > a, .nav-aside li.active a{
+    background: #8C7C69!important;
+}
+.nav-item.active > a:hover, .nav-aside li.active a:hover{
+    background: #8C7C69!important;
+}
+@media (min-width: 768px) {
+    .nav-item.active > a:before,
+    .nav-aside li.active a:before {
+        border-left-color: #8C7C69!important;
+    }
+}
+.pill{
+    background: #8C7C69!important;
+}
 /* GROUPS HOME */
 .page-container[data-request$="/group/"] h1 {
     display: none!important;

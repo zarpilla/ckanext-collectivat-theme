@@ -14,7 +14,7 @@
 
 
 {% block header_site_search -%}
-    {% if request.path == '/' or ( '/dataset/' in request.path and not request.path.endswith('/') ) %}
+    {% if request.path == '/' or request.path == '/about' or ( '/dataset/' in request.path and not request.path.endswith('/') ) %}
     {{ super() }}
     {% endif %}    
 {% endblock -%}
