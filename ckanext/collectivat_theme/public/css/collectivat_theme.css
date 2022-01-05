@@ -15,8 +15,11 @@ body{
     background: #000!important;
 }
 .masthead{
-    background: #fff!important;
-    position: relative;
+    background: #fff!important;    
+    position: static;
+}
+.masthead .container{
+    position: static;
 }
 .masthead .logo img {
     display: none;
@@ -27,12 +30,14 @@ body{
     height: 60px;
     background-size: contain;
 }
-.navbar-left::after {
-    content: 'Ladino Data Hub';
+.navbar-left {
     color:#333;
     font-size: 4rem;
     vertical-align: 12px;
     margin-left: 1rem;
+}
+.site-title{
+    vertical-align: 12px;
 }
 .masthead .nav > li > a{
     color: #000!important;
@@ -47,16 +52,16 @@ body{
 }
 .page-pre{
     width: 100%;
-    height: 35vh;
+    height: 200px;
     background-color: #8C7C69;
     background-size: cover;
     display: flex;
     flex-direction: column;
-    background-image: url('/images/638dbb55d80b759a4a551e98c6f60a18c600c969.jpg');
-    background-size: cover;
+    /* background-image: url('/images/638dbb55d80b759a4a551e98c6f60a18c600c969.jpg');
+    background-size: cover; */
 }
 .homepage-pre {
-    height: 55vh;
+    height: 450px;
     background-image: url('/images/638dbb55d80b759a4a551e98c6f60a18c600c969.jpg');
     background-size: cover;
 }
@@ -77,10 +82,11 @@ body{
 }
 .masthead .site-search{
     position: absolute;
-    top: 150px;
+    top: 120px;
     display: flex;
     width: 100%;
     left: 0;
+    margin: 0!important;
 }
 .masthead .site-search .field{
     background: #fff;
@@ -89,7 +95,7 @@ body{
 }
 
 .masthead .site-search input{
-    width: 30vw!important;
+    width: 570px!important;
     max-width: 90vw;
     border-radius: 0;
     border:0;
@@ -132,9 +138,105 @@ body{
 .site-footer .address{
     font-size: 1.7rem;   
 }
+.main .primary{
+    position: inherit!important;
+}
 .wrapper {
     border: 0!important;
     border-radius: 0!important;
     box-shadow:none!important;
     margin-top: 3rem;
+    position: inherit!important;
+}
+.wrapper::before{
+    border: 0!important;
+}
+.module-heading{
+    background: transparent!important;
+    border: 0!important;
+    font-size: 1.8rem!important;
+}
+.module-heading .fa{
+    font-size: 1.8rem!important;
+}
+.search-form .search-input-group{
+    position: absolute;
+    top: -160px;
+    left: calc(50vw - (325px) - 5px);
+    width: calc(570px + 8rem)!important;
+    padding: 4rem!important;
+    background: #fff;
+    opacity: 0.9;
+}
+.search-form .search-input-group .form-control{
+    background: #fff;
+    border:0;
+    border-bottom:1px solid #666;
+    box-shadow: none;
+    font-size: 2rem;
+    border-radius: 0;
+}
+.search-form .search-input-group button{
+    border: 0!important;
+    border-bottom: 1px solid #666!important;
+    border-radius: 0!important;
+    color:#999!important;
+    height: 46px;
+}
+.search-form .search-input-group button:hover, .search-form .search-input-group button:active:hover{
+    background: transparent!important;
+    color:#333!important;
+}
+.media-grid {
+    background: none!important;
+    border: 0!important;
+}
+.media-item {
+    box-shadow: 1px 3px 5px #ccc;
+    width: calc(33% - 10px)!important;
+    position: relative!important;
+    top:inherit!important;
+    left: inherit!important;
+}
+.media-grid .media-item:first-child{
+    margin: 0!important;
+}
+.media-view:hover, .media-view.hovered{
+    border-color: #ddd!important;
+    box-shadow: 1px 3px 6px #ccc!important;
+}
+.module-content{
+    padding: 15px!important;
+}
+.media-heading{
+    margin: 1rem 0!important;
+}
+.page-header{
+    background: none!important;
+}
+/* GROUPS HOME */
+.page-container[data-request$="/group/"] h1 {
+    display: none!important;
+}
+.page-container[data-request$="/group/"] .search-form .control-order-by {
+    display: none!important;
+}
+.page-container[data-request$="/group/"] .search-form{
+    padding-bottom: 0!important;
+}
+.page-container[data-request$="/group/"] .media-grid{
+    padding-top: 0!important;
+}
+/* ORGS HOME */
+.page-container[data-request$="/organization/"] h1 {
+    display: none!important;
+}
+.page-container[data-request$="/organization/"] .search-form .control-order-by {
+    display: none!important;
+}
+.page-container[data-request$="/organization/"] .search-form{
+    padding-bottom: 0!important;
+}
+.page-container[data-request$="/organization/"] .media-grid{
+    padding-top: 0!important;
 }

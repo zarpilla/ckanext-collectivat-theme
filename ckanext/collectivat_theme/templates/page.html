@@ -3,9 +3,14 @@
 {% block maintag %}
 <div class="page-pre">
 </div>
-  {{ super() }} 
+{{ super() }} 
 {% endblock %}
 
+{% block content %}
+<div class="page-container" data-request="{{request.url}}">
+  {{ super() }} 
+</div>
+{% endblock %}
 
 {% block breadcrumb %}
   {% if self.breadcrumb_content() | trim %}

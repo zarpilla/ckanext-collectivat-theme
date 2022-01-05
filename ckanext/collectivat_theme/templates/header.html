@@ -12,3 +12,18 @@
     </div>    
 {% endblock -%}
 
+
+{% block header_site_search -%}
+    {% if request.path == '/' or ( '/dataset/' in request.path and not request.path.endswith('/') ) %}
+    {{ super() }}
+    {% endif %}    
+{% endblock -%}
+
+
+{% block header_logo -%}
+    {{ super() }}
+    <span class="site-title">
+    {% trans %}Ladino Data Hub
+    {% endtrans %}    
+    </span>
+{% endblock -%}
