@@ -37,3 +37,14 @@
         {% endif %} 
     {% endif %}
 {% endblock -%}
+
+{% block header_account_notlogged %}    
+    {% snippet "snippets/language_selector.html" %}    
+    {{ super() }}
+{% endblock %}
+
+
+{% block header_account_logged %}
+    {% snippet "snippets/language_selector.html" %}    
+    {{ super() }}
+{% endblock %}
