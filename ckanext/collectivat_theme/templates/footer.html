@@ -1,8 +1,6 @@
 {% ckan_extends %}
 
-{% set dataset_type = h.default_package_type() %}
-
-
+{% set dataset_type = "dataset" %}
 
 {% block footer_debug -%}
 {% endblock -%}
@@ -31,9 +29,9 @@
         <ul class="list-unstyled">
             <li>
                 <a href="{{ h.url_for('user.logout') }}" title="{{ _('Log out') }}">
-                  <span class="text">{{ _('Log out') }}</span>
+                    <span class="text">{{ _('Log out') }}</span>
                 </a>
-              </li>
+            </li>
         </ul>
         {% else %}
         <ul class="list-unstyled">
