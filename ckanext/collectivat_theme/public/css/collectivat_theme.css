@@ -289,6 +289,16 @@ body{
 .page-container[data-request$="/group/"] .media-grid{
     padding-top: 0!important;
 }
+.module-image img {
+    width:100%!important;
+    height: auto!important;
+    max-width:100%!important;
+    max-height: inherit!important;
+}
+.module-image{
+    width:33%!important;
+    height: auto!important;
+}
 /* ORGS HOME */
 .page-container[data-request$="/organization/"] h1 {
     display: none!important;
@@ -308,7 +318,7 @@ body{
     font-size: 2.5rem;
 }
 .module h1{
-    font-size: 4rem;
+    font-size: 2.9rem;
 }
 /* RESPONSIVE */
 
