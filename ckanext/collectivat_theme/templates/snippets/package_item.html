@@ -1,0 +1,20 @@
+{% ckan_extends %}
+
+{% block heading %}
+<div class="module-image-block">
+    <a class="module-image module-image-organization" href="{{ h.url_for(package.type ~ '.read', id=package.name) }}">    
+        <img src="{{ h.url_for_static_or_external('/uploads/group/' + package.organization.image_url) }}" alt="{{ package.name }}" />    
+    {% for extra in h.sorted_extras(package.extras) %}
+        {% set key, value = extra %}
+        {% if key == 'image_url' %}
+        <img src="{{ value }}" alt="{{ package.name }}" title="{{ package.name }}" />    
+        {% else %}
+        {% endif %}
+    {% endfor %}
+</div>
+
+{{ super() }}  
+{% endblock %}
+
+{% block resources_inner %}
+{% endblock %}

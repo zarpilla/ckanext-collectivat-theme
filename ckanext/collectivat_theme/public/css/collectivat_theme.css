@@ -237,7 +237,7 @@ body{
     top:inherit!important;
     left: inherit!important;
 }
-.media-grid .media-item:first-child{
+.media-grid .media-item:nth-child(3n-2){
     margin: 0!important;
 }
 .media-view:hover, .media-view.hovered{
@@ -320,6 +320,31 @@ body{
 .module h1{
     font-size: 2.9rem;
 }
+/* DATASETS HOME */
+.module-image-block {
+  display: block;
+  height: 250px;
+  margin: 0 0 1.5rem;
+}
+
+.module-image-block .module-image{
+    width: 100%!important;
+    float: none!important;
+    height: 250px!important;
+    display: block;
+    position: relative;
+}
+.module-image-block .module-image img {
+    width: 100%!important;
+    height: 250px!important;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    border-radius: 3px;
+}
+.dataset-content {
+    font-size: 1.7rem;
+}
 /* RESPONSIVE */
 
 /* Extra small devices (portrait phones, less than 576px) */
@@ -342,7 +367,7 @@ body{
         width: 100vw!important;
         left: 0;
     }
-    .media-item, .media-grid .media-item:first-child {
+    .media-item, .media-grid .media-item:nth-child(3n - 2) {
         width: 100%!important;
         margin-left: 0!important;
         margin-bottom: 2rem!important;
@@ -442,4 +467,8 @@ body{
     }
 }
 
-@media (min-width: 1200px) {  }
+@media (min-width: 1200px) {  
+    .media-grid {
+        margin-top: -50px!important;
+    }
+}
