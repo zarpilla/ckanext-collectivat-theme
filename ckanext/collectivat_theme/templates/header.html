@@ -48,3 +48,22 @@
     {% snippet "snippets/language_selector.html" %}    
     {{ super() }}
 {% endblock %}
+
+{% block header_site_navigation_tabs %}
+{% if c.userobj %}
+    {{ h.build_nav_main(
+    ('dataset.search', _('Datasets')),
+    ('organization.index', _('Organizations')),
+    ('group.index', _('Groups')),    
+    ('home.about', _('About')),
+    ('user.logout', _('Logout')) ) }},
+{% else %}
+    {{ h.build_nav_main(
+    ('dataset.search', _('Datasets')),
+    ('organization.index', _('Organizations')),
+    ('group.index', _('Groups')),
+    ('home.about', _('About')),
+    ('user.login', _('Login')) ) }},
+{% endif %}
+    
+{% endblock %}
