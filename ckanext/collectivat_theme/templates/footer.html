@@ -11,7 +11,7 @@
 <div class="row">
     <div class="col-md-8 footer-links">
       {% block footer_nav %}        
-        <ul class="list-unstyled">
+        <!-- <ul class="list-unstyled">
             {% block footer_site_navigation_tabs %}
             {% set org_type = 'organization' %}
             {% set group_type = 'group' %}
@@ -24,7 +24,7 @@
                 h.humanize_entity_type('group_type', group_type, 'main nav') or _('Groups'), ['group']),
                     ('home.about', _('About')) ) }}
             {% endblock %}
-        </ul>
+        </ul> -->
         {% if c.userobj %}
         <ul class="list-unstyled">
             <li>
