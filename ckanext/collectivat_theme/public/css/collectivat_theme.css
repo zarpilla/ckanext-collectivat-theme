@@ -342,9 +342,31 @@ body{
     left: 0;
     border-radius: 3px;
 }
-.dataset-content {
+.dataset-item {
+    margin-bottom: 2.5rem;
+}
+.dataset-item .dataset-content {
     font-size: 1.7rem;
 }
+.dataset-item .org-name {
+    margin-bottom: 1.5rem;
+    font-size: 1.7rem!important;
+}
+.dataset-item .dataset-resources{
+    margin-top: 1.5rem!important;
+    font-size: 1.7rem!important;
+}
+.dataset-item .label{
+    background: none!important;
+    padding: 0 0.6em;
+    color: #333333!important;
+    font-size: 1.7rem!important;
+    font-weight: normal!important;
+}
+.dataset-item .separator{
+    padding: 0 1rem;
+}
+
 /* RESPONSIVE */
 
 /* Extra small devices (portrait phones, less than 576px) */
@@ -470,5 +492,11 @@ body{
 @media (min-width: 1200px) {  
     .media-grid {
         margin-top: -50px!important;
+    }
+    .page-container[data-request$="/group/"] .media-grid {
+        margin-top: 0px!important;
+    }
+    .page-container[data-request$="/organization/"] .media-grid {
+        margin-top: 0px!important;
     }
 }

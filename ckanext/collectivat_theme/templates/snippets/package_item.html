@@ -11,10 +11,24 @@
         {% else %}
         {% endif %}
     {% endfor %}
+    </a>
 </div>
-
-{{ super() }}  
+{{ super() }}
+{% if request.path != '/' %}
+<div class="org-name">
+    {{ package.organization.name }}
+</div>
+{% endif %}
 {% endblock %}
 
 {% block resources_inner %}
+{% if request.path != '/' %}
+<li class="metadata-modified">
+    {{ _('Dataset Updated') }} {{ h.render_datetime(package.metadata_modified, '%d/%m/%Y') }}
+</li>
+<li class="separator">
+    |
+</li>
+{{ super() }}
+{% endif %}
 {% endblock %}
