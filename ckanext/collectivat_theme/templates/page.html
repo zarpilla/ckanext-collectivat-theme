@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="page-container" data-request="{{request.url}}">
+<div class="page-container" data-request="{{request.url}}" data-logged="{{ 'yes' if c.userobj else 'no'}}">
   {{ super() }} 
 </div>
 {% endblock %}

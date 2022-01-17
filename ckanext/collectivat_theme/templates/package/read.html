@@ -1,0 +1,51 @@
+{% ckan_extends %}
+
+{% block package_notes %}
+<div class="organization-field d-flex">
+
+    {% set url = h.url_for(c.pkg_dict.organization.type + '.read', id=c.pkg_dict.organization.name, ) %}
+    <a href="{{ url }}">
+    {{ c.pkg_dict.organization.title }}
+    </a>
+
+    <div class="created-field">
+        / {{ _('Created') }} {{ h.render_datetime(c.pkg_dict.metadata_created, '%d/%m/%Y') }}
+    </div>
+    <div class="created-field">
+        / {{ _('Updated') }} {{ h.render_datetime(c.pkg_dict.metadata_modified, '%d/%m/%Y') }}
+    </div>
+
+</div>
+<div class="module-image-block">
+<a class="module-image module-image-organization" href="{{ h.url_for(c.pkg_dict.type ~ '.read', id=c.pkg_dict.name) }}">    
+    <img src="{{ h.url_for_static_or_external('/uploads/group/' + c.pkg_dict.organization.image_url) }}" alt="{{ c.pkg_dict.name }}" />    
+{% for extra in h.sorted_extras(c.pkg_dict.extras) %}
+    {% set key, value = extra %}
+    {% if key == 'image_url' %}
+    <img src="{{ value }}" alt="{{ c.pkg_dict.name }}" title="{{ c.pkg_dict.name }}" />    
+    {% else %}
+    {% endif %}
+{% endfor %}
+</a>
+</div>
+
+{{ super() }}
+{% endblock %}
+
+
+
+{% block package_resources %}
+<div class="organization-field tags-container">
+    {{ _('Tags') }}:
+</div>
+{% snippet "package/snippets/tags.html", tags=pkg.tags %}
+{% endblock %}
+
+{% block package_tags %}
+{% snippet "package/snippets/resources_list.html", pkg=pkg, resources=pkg.resources, is_activity_archive=is_activity_archive %}
+{% endblock %}
+
+
+
+{% block package_additional_info %}
+{% endblock %}
