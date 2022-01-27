@@ -9,20 +9,22 @@
     </a>
 
     <div class="created-field">
-        / {{ _('Created') }} {{ h.render_datetime(c.pkg_dict.metadata_created, '%d/%m/%Y') }}
+        <span class="sep">/</span> {{ _('Created') }} {{ h.render_datetime(c.pkg_dict.metadata_created, '%d/%m/%Y') }}
     </div>
     <div class="created-field">
-        / {{ _('Updated') }} {{ h.render_datetime(c.pkg_dict.metadata_modified, '%d/%m/%Y') }}
+        <span class="sep">/</span> {{ _('Updated') }} {{ h.render_datetime(c.pkg_dict.metadata_modified, '%d/%m/%Y') }}
     </div>
 
 </div>
 <div class="module-image-block">
-<a class="module-image module-image-organization" href="{{ h.url_for(c.pkg_dict.type ~ '.read', id=c.pkg_dict.name) }}">    
+<a class="module-image module-image-detail module-image-organization" href="{{ h.url_for(c.pkg_dict.type ~ '.read', id=c.pkg_dict.name) }}">    
     <img src="{{ h.url_for_static_or_external('/uploads/group/' + c.pkg_dict.organization.image_url) }}" alt="{{ c.pkg_dict.name }}" />    
 {% for extra in h.sorted_extras(c.pkg_dict.extras) %}
     {% set key, value = extra %}
     {% if key == 'image_url' %}
-    <img src="{{ value }}" alt="{{ c.pkg_dict.name }}" title="{{ c.pkg_dict.name }}" />    
+    <div class="detail-image-bg">
+        <img src="{{ value }}" alt="{{ c.pkg_dict.name }}" title="{{ c.pkg_dict.name }}" />    
+    </div>    
     {% else %}
     {% endif %}
 {% endfor %}

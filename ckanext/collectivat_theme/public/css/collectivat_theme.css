@@ -1,6 +1,27 @@
 body{
     background: #fff!important;
 }
+.nav-tabs > li > a, .activity a, a.resource-url-analytics:not(.btn) {
+    color: #5F0A30!important;
+    text-decoration: none;
+}
+.nav-tabs > li > a:hover, .activity a:hover, a.resource-url-analytics:not(.btn):hover {
+    color: #666!important;
+    text-decoration: none;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #5F0A30!important;
+    border-color: #5F0A30!important;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #5F0A30!important;
+    border-color: #5F0A30!important;
+}
+.toolbar{
+    z-index: 100;
+}
 /* HEADER */
 .pre-header {
     text-align: center;
@@ -230,6 +251,9 @@ body{
     background: none!important;
     border: 0!important;
 }
+.media-grid .notes{
+    font-size: 14px;
+}
 .media-item {
     box-shadow: 1px 3px 5px #ccc;
     width: calc(33% - 10px)!important;
@@ -299,6 +323,9 @@ body{
     width:33%!important;
     height: auto!important;
 }
+.wflex {
+    width:60%!important;
+}
 /* ORGS HOME */
 .page-container[data-request$="/organization/"] h1 {
     display: none!important;
@@ -334,6 +361,10 @@ body{
     display: block;
     position: relative;
 }
+.module-image-block.d-flex .module-image{
+    width: 40%!important;
+    margin-right: 2rem!important;
+}
 .module-image-block .module-image img {
     width: 100%!important;
     height: 250px!important;
@@ -341,6 +372,25 @@ body{
     position: absolute;
     left: 0;
     border-radius: 3px;
+}
+.module-image-block.d-flex .module-image img{
+    object-fit: inherit;    
+}
+.module-image-block .module-image-detail{
+    width: auto!important;
+    height: 250px!important;
+}
+.module-image-block .module-image-detail img{
+    height: 250px!important;
+    width: auto!important;
+    object-fit: inherit;
+}
+.detail-image-bg {
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    height: 250px;
 }
 .dataset-item {
     margin-bottom: 2.5rem;
@@ -351,6 +401,12 @@ body{
 .dataset-item .org-name {
     margin-bottom: 1.5rem;
     font-size: 1.7rem!important;
+}
+.dataset-item .org-name a{
+    color:#333333;
+}
+.dataset-item .org-name a:hover{
+    text-decoration: underline;
 }
 .dataset-item .dataset-resources{
     margin-top: 1.5rem!important;
@@ -426,8 +482,49 @@ a.tag:hover {
     padding: 0!important;
     border:0!important;
 }
-
-
+.resource-item:hover{
+    background-color:transparent!important;
+}
+.resource-item .heading{
+    font-size: 16px!important;
+    color:#333!important;
+}
+.resource-item .description{
+    font-size: 14px!important;
+}
+.resource-item .dropdown-toggle{
+    display: none!important;
+}
+.resource-item .dropdown-menu{
+    display: flex!important;
+    background: none!important;
+    border-radius: 0!important;
+    box-shadow: none!important;
+    border: 0!important;
+    position: relative!important;
+}
+.resource-item .btn-group {
+    right: 150px!important;
+    top: 8px!important;
+}
+.resource-item .dropdown-menu li{
+    margin-right: 0.5rem;
+}
+.resource-item .dropdown-menu li a{
+    border: 1px solid #5F0A30;
+    background: #5F0A30!important;
+    border-radius: 4px;
+    color:#fff!important;
+}
+.add-to-group button{
+    margin-top: 1rem;
+}
+.page-header .nav-tabs .fa{
+    display: none!important;
+}
+.table-striped > tbody > tr:nth-of-type(2n+1){
+    background-color: transparent!important;
+}
 
 /* RESPONSIVE */
 
@@ -438,6 +535,10 @@ a.tag:hover {
         margin-right: 2rem;
         margin-left: 2rem;
         width: calc(100vw - 4rem);
+    }
+    .page-pre:not(.homepage-pre) {
+        height: 15px!important;
+        margin-bottom: 1rem;
     }
     .site-title{
         font-size: 2.5rem;
@@ -475,6 +576,18 @@ a.tag:hover {
     .list-languages {
         margin-right: 0.5rem !important;
     }
+    .toolbar .breadcrumb a{
+        color: #333!important;
+    }
+    .main aside.secondary{
+        display: none;
+    }
+    .organization-field.d-flex{
+        display: block;
+    }
+    .created-field .sep{
+        display: none;
+    }
 }
 
 /* // Small devices (landscape phones, 576px and up) */
@@ -499,6 +612,9 @@ a.tag:hover {
     }
     .list-languages {
         margin-right: 0.5rem !important;
+    }
+    .toolbar .breadcrumb a{
+        color: #000!important;
     }
 }
 
@@ -561,4 +677,29 @@ a.tag:hover {
     .page-container[data-request$="/organization/"] .media-grid {
         margin-top: 0px!important;
     }
+    .page-container[data-request*="/dataset/"] .row.wrapper {        
+        display: flex;
+    }
+
+    .page-container[data-request*="/dataset/"] .row.wrapper > aside{        
+        order: 2;
+    }
+    .page-container[data-request*="/dataset/"] .row.wrapper > div{        
+        order: 1;
+    }    
+    .page-container[data-request*="/dataset/"] .row.wrapper .page-header .nav-tabs {
+        position: absolute;
+        z-index: 10;
+        margin-bottom: 1.5rem;
+    }
+
+    .page-container[data-request*="/dataset/"] .row.wrapper .page-header{
+        border-bottom: 0!important;
+    }
+    
+
+    .page-container[data-request*="/dataset/"] .module-content {
+        padding-left: 0!important;
+    }
+
 }

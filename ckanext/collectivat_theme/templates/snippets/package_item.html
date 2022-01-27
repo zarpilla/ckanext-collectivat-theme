@@ -1,24 +1,58 @@
 {% ckan_extends %}
 
+
+{% set notes = h.markdown_extract(package.notes, extract_length=truncate) %}
+
+
 {% block heading %}
-<div class="module-image-block">
-    <a class="module-image module-image-organization" href="{{ h.url_for(package.type ~ '.read', id=package.name) }}">    
-        <img src="{{ h.url_for_static_or_external('/uploads/group/' + package.organization.image_url) }}" alt="{{ package.name }}" />    
-    {% for extra in h.sorted_extras(package.extras) %}
-        {% set key, value = extra %}
-        {% if key == 'image_url' %}
-        <img src="{{ value }}" alt="{{ package.name }}" title="{{ package.name }}" />    
-        {% else %}
-        {% endif %}
-    {% endfor %}
-    </a>
-</div>
-{{ super() }}
-{% if request.path != '/' %}
-<div class="org-name">
-    {{ package.organization.name }}
-</div>
+
+{% if request.path == '/' %}
+
+    <div class="module-image-block">
+        <a class="module-image module-image-organization" href="{{ h.url_for(package.type ~ '.read', id=package.name) }}">    
+            <img src="{{ h.url_for_static_or_external('/uploads/group/' + package.organization.image_url) }}" alt="{{ package.name }}" />    
+        {% for extra in h.sorted_extras(package.extras) %}
+            {% set key, value = extra %}
+            {% if key == 'image_url' %}
+            <img src="{{ value }}" alt="{{ package.name }}" title="{{ package.name }}" />    
+            {% else %}
+            {% endif %}
+        {% endfor %}
+        </a>
+    </div>
+    {{ super() }}
+
+    <div class="notes">
+        {{ notes|urlize }}
+    </div>
+
+{% else %}
+    {{ super() }}
+    
+    <div class="org-name">
+        <a href="{{ h.url_for('organization.read', id=package.organization.name) }}">
+            {{ package.organization.title }}
+        </a>    
+    </div>
+
+    <div class="module-image-block d-flex">
+        <a class="module-image module-image-organization" href="{{ h.url_for(package.type ~ '.read', id=package.name) }}">    
+            <img src="{{ h.url_for_static_or_external('/uploads/group/' + package.organization.image_url) }}" alt="{{ package.name }}" />    
+        {% for extra in h.sorted_extras(package.extras) %}
+            {% set key, value = extra %}
+            {% if key == 'image_url' %}
+            <img src="{{ value }}" alt="{{ package.name }}" title="{{ package.name }}" />    
+            {% else %}
+            {% endif %}
+        {% endfor %}
+        </a>
+        <div class="wflex">
+            {{ notes|urlize }}
+        </div>
+    </div>
+
 {% endif %}
+
 {% endblock %}
 
 {% block resources_inner %}
@@ -31,4 +65,12 @@
 </li>
 {{ super() }}
 {% endif %}
+{% endblock %}
+
+
+
+
+
+
+{% block notes %}
 {% endblock %}
