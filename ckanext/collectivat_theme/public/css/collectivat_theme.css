@@ -639,6 +639,9 @@ a.tag:hover {
     .masthead .site-search{
         display: block!important;
     }
+    .wrapper::before{
+        display: none!important;
+    }
 }
 
 /* // Large devices (desktops, 992px and up) */
@@ -658,16 +661,26 @@ a.tag:hover {
         margin-left: 10rem;
         width: calc(100vw - 20rem);
     }
+    .wrapper::before{
+        display: none!important;
+    }
 }
+
 
 /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) and (max-width: 1499.98px) {
     .homepage-pre .message{
         width: 60vw;
     }
+    .wrapper::before{
+        display: none!important;
+    }
 }
 
 @media (min-width: 1200px) {  
+    .wrapper::before{
+        display: none!important;
+    }
     .media-grid {
         margin-top: -50px!important;
     }
@@ -686,12 +699,22 @@ a.tag:hover {
     }
     .page-container[data-request*="/dataset/"] .row.wrapper > div{        
         order: 1;
+    }
+    .page-container[data-request$="/dataset/"] .row.wrapper > aside{        
+        order: 1;
+    }
+    .page-container[data-request$="/dataset/"] .row.wrapper > div{        
+        order: 2;
     }    
-    .page-container[data-request*="/dataset/"] .row.wrapper .page-header .nav-tabs {
+    /* .page-container[data-request*="/dataset/"] .row.wrapper .page-header .nav-tabs {
         position: absolute;
         z-index: 10;
         margin-bottom: 1.5rem;
-    }
+    } */
+    .page-header .nav-tabs {
+        width: 100%!important;
+        margin-bottom: 2rem!important;
+    }    
 
     .page-container[data-request*="/dataset/"] .row.wrapper .page-header{
         border-bottom: 0!important;
