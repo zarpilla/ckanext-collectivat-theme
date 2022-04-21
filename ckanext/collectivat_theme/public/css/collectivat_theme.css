@@ -696,9 +696,16 @@ a.tag:hover {
 
     .page-container[data-request*="/dataset/"] .row.wrapper > aside{        
         order: 2;
+        
     }
     .page-container[data-request*="/dataset/"] .row.wrapper > div{        
-        order: 1;
+        order: 1;        
+    }
+    .page-container[data-request*="/resource/"] .row.wrapper .primary{        
+        display: none;
+    }
+    .page-container[data-request*="/resource/"] .row.wrapper > aside{        
+        display: none;
     }
     .page-container[data-request$="/dataset/"] .row.wrapper > aside{        
         order: 1;
