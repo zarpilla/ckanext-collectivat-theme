@@ -713,6 +713,12 @@ a.tag:hover {
     .page-container[data-request*="/resource/new"] .row.wrapper > aside{        
         display: block;
     }
+    .page-container[data-request*="/resource/"][data-request*="/edit"] .row.wrapper .primary{        
+        display: block;
+    }
+    .page-container[data-request*="/resource/new"][data-request*="/edit"] .row.wrapper > aside{        
+        display: block;
+    }
     .page-container[data-request$="/dataset/"] .row.wrapper > aside{        
         order: 1;
     }
