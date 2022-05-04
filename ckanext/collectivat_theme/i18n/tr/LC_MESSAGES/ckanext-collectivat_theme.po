@@ -1,0 +1,117 @@
+# Turkish translations for collectivat_theme.
+# Copyright (C) 2022 ORGANIZATION
+# This file is distributed under the same license as the collectivat_theme
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: collectivat_theme 0.0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2022-05-04 16:52+0000\n"
+"PO-Revision-Date: 2022-05-04 16:52+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: tr\n"
+"Language-Team: tr <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ckanext/collectivat_theme/templates/footer.html:17
+#: ckanext/collectivat_theme/templates/header.html:55
+#: ckanext/collectivat_theme/templates/header.html:62
+msgid "Datasets"
+msgstr ""
+
+#: ckanext/collectivat_theme/templates/footer.html:18
+#: ckanext/collectivat_theme/templates/header.html:56
+#: ckanext/collectivat_theme/templates/header.html:63
+msgid "Organizations"
+msgstr ""
+
+#: ckanext/collectivat_theme/templates/footer.html:19
+#: ckanext/collectivat_theme/templates/header.html:57
+#: ckanext/collectivat_theme/templates/header.html:64
+msgid "Groups"
+msgstr ""
+
+#: ckanext/collectivat_theme/templates/footer.html:20
+#: ckanext/collectivat_theme/templates/header.html:58
+#: ckanext/collectivat_theme/templates/header.html:65
+msgid "About"
+msgstr ""
+
+#: ckanext/collectivat_theme/templates/footer.html:26
+#: ckanext/collectivat_theme/templates/footer.html:27
+msgid "Log out"
+msgstr ""
+
+#: ckanext/collectivat_theme/templates/footer.html:34
+msgid "Log in"
+msgstr ""
+
+#: ckanext/collectivat_theme/templates/footer.html:37
+msgid "Register"
+msgstr ""
+
+#: ckanext/collectivat_theme/templates/footer.html:47
+msgid "Contact"
+msgstr ""
+
+#: ckanext/collectivat_theme/templates/footer.html:79
+msgid ""
+"This web page is created within the framework of the “Grant Scheme for "
+"Common Cultural Heritage: Preservation and Dialogue between Turkey and "
+"the EU–II (CCH-II)” implemented by the Ministry of Culture and Tourism of"
+" the Republic of Turkey with the financial support of the European Union."
+" The content of this website is the sole responsibility of Col·lectivaT "
+"and SKAD and does not necessarily reflect the views of the European "
+"Union."
+msgstr "Bu web sitesi T.C. Kültür ve Turizm Bakanlığı tarafından Avrupa Birliği’nin mali desteği ile hayata geçirilen “Ortak Kültür Mirası: Türkiye ve AB Arasında Koruma ve Diyalog-II (CCH-II) Hibe Programı” kapsamında hibe desteği alarak hazırlanmıştır. Web sitesinin içeriği tamamıyla Col·lectivaT ve SKAD’ın sorumluluğu altındadır ve Avrupa Birliğinin görüşlerini yansıtmak zorunda değildir."
+
+#: ckanext/collectivat_theme/templates/header.html:9
+msgid "This project is funded by the European Union."
+msgstr "Bu proje Avrupa Birliği tarafından finanse edilmektedir."
+
+#: ckanext/collectivat_theme/templates/header.html:27
+msgid "Ladino Data Hub"
+msgstr ""
+
+#: ckanext/collectivat_theme/templates/header.html:59
+msgid "Logout"
+msgstr ""
+
+#: ckanext/collectivat_theme/templates/header.html:66
+msgid "Login"
+msgstr ""
+
+#: ckanext/collectivat_theme/templates/home/index.html:11
+msgid "All data on Sephardic culture and Ladino language in one place"
+msgstr "Sefarad kültürü ve Ladino dili ile ilgili tüm verilerin ortak noktası"
+
+#: ckanext/collectivat_theme/templates/package/read.html:12
+msgid "Created"
+msgstr ""
+
+#: ckanext/collectivat_theme/templates/package/read.html:15
+msgid "Updated"
+msgstr ""
+
+#: ckanext/collectivat_theme/templates/package/read.html:41
+msgid "Tags"
+msgstr ""
+
+#: ckanext/collectivat_theme/templates/snippets/home_breadcrumb_item.html:1
+msgid "Home"
+msgstr ""
+
+#: ckanext/collectivat_theme/templates/snippets/package_item.html:61
+msgid "Dataset Updated"
+msgstr ""
+
+#: ckanext/collectivat_theme/templates/snippets/social.html:4
+msgid "Share"
+msgstr ""
+
