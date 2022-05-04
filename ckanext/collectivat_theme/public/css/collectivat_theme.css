@@ -188,6 +188,9 @@ body{
 .masthead .logo, .site-footer .logo{
     display: inherit!important;
 }
+.masthead .logo, .site-footer .logo.logo-3{
+    margin-top: 2rem;
+}
 /* CONTENT */
 .main{
     background: #fff!important;
