@@ -1,8 +1,9 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
+from ckan.lib.plugins import DefaultTranslation
 
-
-class Collectivat_ThemePlugin(plugins.SingletonPlugin):
+class Collectivat_ThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
+    plugins.implements(plugins.ITranslation)
     plugins.implements(plugins.IConfigurer)
 
     # IConfigurer

@@ -174,16 +174,22 @@ body{
     margin: 2rem auto;
     background: #fff;
     padding: 1rem 0;
+    position: relative;
 }
 .site-footer .logos .logo img{
     text-align: center;
     margin: 1rem auto;
+    max-height: 120px;
 }
+
 .contact {
     text-align: right;
 }
 .masthead .logo, .site-footer .logo{
     display: inherit!important;
+}
+.masthead .logo, .site-footer .logo.logo-3{
+    margin-top: 2rem;
 }
 /* CONTENT */
 .main{
@@ -744,4 +750,8 @@ a.tag:hover {
         padding-left: 0!important;
     }
 
+}
+
+.logos-disclaimer {
+    font-size: 13px;
 }
