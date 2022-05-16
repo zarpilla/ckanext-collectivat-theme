@@ -15,11 +15,11 @@
     <div class="main">
         <div class="container">            
             <div class="row row2 zmt-4">
-                <div class="col-md-12 col1">
+                <div class="col-md-12 col1 collectivat-packages-js">
                     {% snippet 'snippets/package_list.html', packages=c.datasets, list_class='media-grid', item_class='media-item' %}                    
+                    <div id="vue-app-packages">{{ message }}</div>
                 </div>                
             </div>
         </div>
     </div>
 {% endblock %}
-
