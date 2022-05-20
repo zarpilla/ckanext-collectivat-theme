@@ -61,15 +61,8 @@ msgid "Contact"
 msgstr ""
 
 #: ckanext/collectivat_theme/templates/footer.html:79
-msgid ""
-"This web page is created within the framework of the “Grant Scheme for "
-"Common Cultural Heritage: Preservation and Dialogue between Turkey and "
-"the EU–II (CCH-II)” implemented by the Ministry of Culture and Tourism of"
-" the Republic of Turkey with the financial support of the European Union."
-" The content of this website is the sole responsibility of Col·lectivaT "
-"and SKAD and does not necessarily reflect the views of the European "
-"Union."
-msgstr "Esta página web se creó en el marco del “Programa de Subvenciones para el Patrimonio Cultural Común: Preservación y Diálogo entre Turquía y la UE-II (CCH-II)” implementado por el Ministerio de Cultura y Turismo de la República de Türkiye con la financiación de la Unión Europea. El contenido de esta página web es de responsabilidad exclusiva de Col·lectivaT y SKAD, y no refleja necesariamente la perspectiva de la Unión Europea."
+msgid "This web page was created with the financial support of the European Union. The content of this website is the sole responsibility of Col·lectivaT and SKAD and does not necessarily reflect the views of the European Union."
+msgstr "Esta página web fue creada con el apoyo financiero de la Unión Europea. El contenido de este sitio web es responsabilidad exclusiva de Col·lectivaT y SKAD y no refleja necesariamente los puntos de vista de la Unión Europea."
 
 #: ckanext/collectivat_theme/templates/header.html:9
 msgid "This project is funded by the European Union."
