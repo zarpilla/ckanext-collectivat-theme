@@ -60,8 +60,7 @@ msgid "Contact"
 msgstr ""
 
 #: ckanext/collectivat_theme/templates/footer.html:79
-msgid ""
-"This web page was created with the financial support of the European Union. The content of this website is the sole responsibility of Col·lectivaT and SKAD and does not necessarily reflect the views of the European Union."
+msgid "This web page was created with the financial support of the European Union. The content of this website is the sole responsibility of Col·lectivaT and SKAD and does not necessarily reflect the views of the European Union."
 msgstr ""
 
 #: ckanext/collectivat_theme/templates/header.html:9
